@@ -1,0 +1,6 @@
+framework module Pods_party_songTests {
+  umbrella header "Pods-party-songTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
