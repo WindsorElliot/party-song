@@ -15,6 +15,7 @@
 		8BBAA94F2197845400BA6A0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BBAA94D2197845400BA6A0E /* LaunchScreen.storyboard */; };
 		8BBAA95A2197845400BA6A0E /* party_songTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAA9592197845400BA6A0E /* party_songTests.swift */; };
 		8BBAA9652197845400BA6A0E /* party_songUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAA9642197845400BA6A0E /* party_songUITests.swift */; };
+		8BBAA974219784B000BA6A0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BBAA973219784B000BA6A0E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8BBAA9602197845400BA6A0E /* party-songUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "party-songUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BBAA9642197845400BA6A0E /* party_songUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = party_songUITests.swift; sourceTree = "<group>"; };
 		8BBAA9662197845400BA6A0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BBAA973219784B000BA6A0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		8BBAA9402197845300BA6A0E /* party-song */ = {
 			isa = PBXGroup;
 			children = (
+				8BBAA9722197848D00BA6A0E /* ressource */,
 				8BBAA9412197845300BA6A0E /* AppDelegate.swift */,
 				8BBAA9432197845300BA6A0E /* ViewController.swift */,
 				8BBAA9452197845300BA6A0E /* Main.storyboard */,
@@ -126,6 +129,14 @@
 				8BBAA9662197845400BA6A0E /* Info.plist */,
 			);
 			path = "party-songUITests";
+			sourceTree = "<group>";
+		};
+		8BBAA9722197848D00BA6A0E /* ressource */ = {
+			isa = PBXGroup;
+			children = (
+				8BBAA973219784B000BA6A0E /* GoogleService-Info.plist */,
+			);
+			path = ressource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BBAA94F2197845400BA6A0E /* LaunchScreen.storyboard in Resources */,
+				8BBAA974219784B000BA6A0E /* GoogleService-Info.plist in Resources */,
 				8BBAA94C2197845400BA6A0E /* Assets.xcassets in Resources */,
 				8BBAA9472197845300BA6A0E /* Main.storyboard in Resources */,
 			);
