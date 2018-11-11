@@ -8,15 +8,30 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var isConnectToDataBase: Bool = false
+    var isMaster: Bool = false
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let userDefault = UserDefaults.standard
+        
+        if userDefault.value(forKey: "kEmailConnectApp") == nil {
+            userDefault.set("", forKey: "kEmailConnectApp")
+            userDefault.synchronize()
+        }
+        
+        if userDefault.value(forKey: "kPasswordConnectApp") == nil {
+            userDefault.set("", forKey: "kPasswordConnectApp")
+            userDefault.synchronize()
+        }
+                
+        FirebaseApp.configure()
         return true
     }
 

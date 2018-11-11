@@ -16,7 +16,9 @@
 		8BBAA94F2197845400BA6A0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BBAA94D2197845400BA6A0E /* LaunchScreen.storyboard */; };
 		8BBAA95A2197845400BA6A0E /* party_songTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAA9592197845400BA6A0E /* party_songTests.swift */; };
 		8BBAA9652197845400BA6A0E /* party_songUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAA9642197845400BA6A0E /* party_songUITests.swift */; };
-		8BBAA974219784B000BA6A0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BBAA973219784B000BA6A0E /* GoogleService-Info.plist */; };
+		8BCF539B21978CBC0088E00B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BCF539A21978CBC0088E00B /* GoogleService-Info.plist */; };
+		8BCF539F21978EE70088E00B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCF539E21978EE70088E00B /* User.swift */; };
+		8BCF53A22197926C0088E00B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCF53A12197926C0088E00B /* FirebaseManager.swift */; };
 		9A607C75E1A45BFE58CA6F21 /* Pods_party_song.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5821840564B8CFC219DFCE1B /* Pods_party_song.framework */; };
 		CCB7753794D867D4CFC4F6F7 /* Pods_party_songTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E36050363EA6D8F654423B5 /* Pods_party_songTests.framework */; };
 /* End PBXBuildFile section */
@@ -61,7 +63,9 @@
 		8BBAA9602197845400BA6A0E /* party-songUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "party-songUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BBAA9642197845400BA6A0E /* party_songUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = party_songUITests.swift; sourceTree = "<group>"; };
 		8BBAA9662197845400BA6A0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BBAA973219784B000BA6A0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BCF539A21978CBC0088E00B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BCF539E21978EE70088E00B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8BCF53A12197926C0088E00B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		91973D5D3513C7090050E4FA /* Pods-party-songUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-party-songUITests.debug.xcconfig"; path = "Target Support Files/Pods-party-songUITests/Pods-party-songUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,9 +122,11 @@
 		8BBAA9402197845300BA6A0E /* party-song */ = {
 			isa = PBXGroup;
 			children = (
+				8BCF53A02197924D0088E00B /* Manager */,
+				8BCF539D21978EC50088E00B /* Entities */,
+				8BCF539C21978EBD0088E00B /* controller */,
 				8BBAA9722197848D00BA6A0E /* ressource */,
 				8BBAA9412197845300BA6A0E /* AppDelegate.swift */,
-				8BBAA9432197845300BA6A0E /* ViewController.swift */,
 				8BBAA9452197845300BA6A0E /* Main.storyboard */,
 				8BBAA94B2197845400BA6A0E /* Assets.xcassets */,
 				8BBAA94D2197845400BA6A0E /* LaunchScreen.storyboard */,
@@ -151,9 +157,33 @@
 		8BBAA9722197848D00BA6A0E /* ressource */ = {
 			isa = PBXGroup;
 			children = (
-				8BBAA973219784B000BA6A0E /* GoogleService-Info.plist */,
+				8BCF539A21978CBC0088E00B /* GoogleService-Info.plist */,
 			);
 			path = ressource;
+			sourceTree = "<group>";
+		};
+		8BCF539C21978EBD0088E00B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				8BBAA9432197845300BA6A0E /* ViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		8BCF539D21978EC50088E00B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8BCF539E21978EE70088E00B /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8BCF53A02197924D0088E00B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8BCF53A12197926C0088E00B /* FirebaseManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		BC75B347AAD05EE0B54343CE /* Frameworks */ = {
@@ -176,7 +206,6 @@
 				91973D5D3513C7090050E4FA /* Pods-party-songUITests.debug.xcconfig */,
 				3190AC4638A99569FC08A8E1 /* Pods-party-songUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -192,7 +221,7 @@
 				8BBAA93B2197845300BA6A0E /* Frameworks */,
 				8BBAA93C2197845300BA6A0E /* Resources */,
 				35FB10791DD8D3B699A8FFC0 /* [CP] Embed Pods Frameworks */,
-				814C728B6134E1DD73AC3B56 /* [CP] Copy Pods Resources */,
+				563FB9C2DBD808EE408B07EE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -290,7 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BBAA94F2197845400BA6A0E /* LaunchScreen.storyboard in Resources */,
-				8BBAA974219784B000BA6A0E /* GoogleService-Info.plist in Resources */,
+				8BCF539B21978CBC0088E00B /* GoogleService-Info.plist in Resources */,
 				8BBAA94C2197845400BA6A0E /* Assets.xcassets in Resources */,
 				8BBAA9472197845300BA6A0E /* Main.storyboard in Resources */,
 			);
@@ -344,12 +373,23 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-party-song/Pods-party-song-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -357,12 +397,23 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -371,7 +422,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-party-song/Pods-party-song-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		814C728B6134E1DD73AC3B56 /* [CP] Copy Pods Resources */ = {
+		563FB9C2DBD808EE408B07EE /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -380,17 +431,27 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-party-song/Pods-party-song-resources.sh",
-				"${PODS_ROOT}/FirebaseInvites/Resources/GINInviteResources.bundle",
-				"${PODS_ROOT}/FirebaseInvites/Resources/GPPACLPickerResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GINInviteResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GPPACLPickerResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -448,7 +509,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BCF539F21978EE70088E00B /* User.swift in Sources */,
 				8BBAA94A2197845300BA6A0E /* party_song.xcdatamodeld in Sources */,
+				8BCF53A22197926C0088E00B /* FirebaseManager.swift in Sources */,
 				8BBAA9442197845300BA6A0E /* ViewController.swift in Sources */,
 				8BBAA9422197845300BA6A0E /* AppDelegate.swift in Sources */,
 			);
